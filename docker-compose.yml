@@ -1,0 +1,18 @@
+version: "2"
+services:
+  nginx:
+    image: nginx
+    ports:
+      - "9301:80"
+    volumes:
+      - ./example:/usr/share/nginx/html:ro
+  streamer:
+    build: .
+    image: rtsp-streamer
+    ports:
+      - "9300:9300"
+    environment:
+      - STREAM_URL=rtsp://184.72.239.149/vod/mp4:BigBuckBunny_175k.mov
+      - STREAM_NAME="Docker Stream"
+    volumes:
+      - ./src:/src

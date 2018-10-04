@@ -1,0 +1,15 @@
+{
+  "name": "rtsp-streamer",
+  "version": "1.0.0",
+  "description": "Example WebSocket RTSP Streaming",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Kyle Lilly",
+  "license": "MIT",
+  "dependencies": {
+    "node-rtsp-stream-es6": "^1.0.6",
+    "ws": "^6.0.0"
+  }
+}
